@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 function Services() {
 
   return (
-    <div className='services'>
+    <div id='services' className='services'>
 
     </div>
   );

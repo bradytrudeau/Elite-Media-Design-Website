@@ -1,13 +1,14 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import './Header.css';
+import EMDLogo from '../../images/image2vector.svg';
 
 const Header = () => {
 
 
   return (
     <div className="header">
-      <img className="nav-logo"></img>
+      <img src={EMDLogo} className="nav-logo"></img>
       <div className="nav">
         <AnchorLink 
           href='#clients'
@@ -18,6 +19,11 @@ const Header = () => {
           href='#services'
           className="nav-link">
             Services
+        </AnchorLink>
+        <AnchorLink 
+          href='#categories'
+          className="nav-link">
+            Categories
         </AnchorLink>
         <AnchorLink 
           href='#contact'

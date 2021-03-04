@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 function CategoriesFeed() {
 
   return (
-    <div className='categories-feed'>
+    <div id='categories' className='categories-feed'>
 
     </div>
   );
