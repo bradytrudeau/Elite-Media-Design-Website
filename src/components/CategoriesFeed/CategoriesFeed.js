@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import './CategoriesFeed.css';
 
 function CategoriesFeed() {
   // Initializing state
@@ -26,21 +27,25 @@ function CategoriesFeed() {
   return (
     <div id='categories' className='categories-feed'>
       <h2>Categories</h2>
-      <Grid container justify="center" spacing={7}>
+      <Grid container justify="center" spacing={1}>
         {categories.map((category, i) => 
           <Grid item>
             <Card
-              style={{width: "100px"}}
+              style={{width: "250px"}}
+              className='card'
             >
                 <CardMedia
                   image={category.strCategoryThumb}
                   title={category.strCategory}
-                  style={{ height: "100px" }}
+                  style={{ height: "200px" }}
                 />
                 <CardContent className="cards">
                   <Typography gutterBottom variant="h5" component="h2">
                     {category.strCategory}
                   </Typography>
+                  {/* <Typography variant="body2" component="p">
+                    {category.strCategoryDescription}
+                  </Typography> */}
                 </CardContent>
             </Card>
           </Grid>

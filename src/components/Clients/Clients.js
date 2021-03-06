@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import Carousel from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import './Clients.css';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import BestBuy from '../../images/bestbuy.png';
 import Walmart from '../../images/walmart.png';
 import Clam from '../../images/clam.png';
@@ -11,17 +12,19 @@ import FleetFarm from '../../images/fleetfarm.png';
 
 
 function Clients() {
-
+  const handleDragStart = (e) => e.preventDefault();
+  const items = [
+    <img className='client-photos' src={BestBuy} onDragStart={handleDragStart} />,
+    <img className='client-photos' src={Walmart} onDragStart={handleDragStart} />,
+    <img className='client-photos' src={FleetFarm} onDragStart={handleDragStart} />,
+    <img className='client-photos' src={Clam} onDragStart={handleDragStart} />,
+    <img className='client-photos' src={BlackFish} onDragStart={handleDragStart} />,
+  ];
   return (
     <div id='clients' className='clients'>
       <h2>Trusted By</h2>
-      <Carousel plugins={['arrows']} animationSpeed='100ms'>
-        <img src={BestBuy} />
-        <img src={Walmart} />
-        <img src={FleetFarm} />
-        <img src={Clam} />
-        <img src={BlackFish} />
-      </Carousel>
+      <AliceCarousel items={items} disableButtonsControls={true}>
+      </AliceCarousel>
     </div>
   );
 } 

@@ -11,6 +11,7 @@ import graphicDesign from '../../images/graphicdesign.png';
 import email from '../../images/email.png';
 import photography from '../../images/photography.png';
 import videography from '../../images/videography.png';
+import './Services.css';
 
 
 function Services() {

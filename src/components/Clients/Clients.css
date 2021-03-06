@@ -1,0 +1,11 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.clients {
+  padding-top: 10px;
+  padding-bottom: 10px;;
+}
+
+.client-photos {
+  max-width: 20%;
+  max-height: 20%;
+}
