@@ -22,7 +22,15 @@ app.get('/categories', (req, res) => {
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(bodyParser.json()); // needed for axios requests
-app.use(express.static('build'));
+if (process.env.NODE_ENV === "production") {
+  // Express will serve up production assets
+  app.use(express.static("build"));
+
+  // Express will serve up the front-end index.html file if it doesn't recognize the route
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve("build", "index.html"))
+  );
+}
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT,  () => {
