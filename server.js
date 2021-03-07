@@ -2,6 +2,7 @@ const { default: Axios } = require('axios');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 app.get('/categories', (req, res) => {
